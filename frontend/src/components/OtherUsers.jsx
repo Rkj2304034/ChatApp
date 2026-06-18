@@ -3,7 +3,7 @@ import '../index.css'
 import useGetOtherUsers from '../hooks/useGetOtherUsers'
 import { useSelector } from 'react-redux';
 import OtherUser from './OtherUser';
-// import'./OtherUser.css'
+import'./OtherUser.css'
 
 const OtherUsers = () => {
 
