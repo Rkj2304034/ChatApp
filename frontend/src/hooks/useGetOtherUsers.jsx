@@ -7,7 +7,7 @@ import { setOtherUsers } from '../redux/userSlice';
 
 const useGetOtherUsers = () => {
     const dispatch = useDispatch();
-    const otherUsers = useSelector(state => state.user)
+    const {otherUsers} = useSelector(state => state.user)
   useEffect(()=>{
 
     const fetchOtherUsers = async() => {
@@ -26,7 +26,7 @@ const useGetOtherUsers = () => {
 
     fetchOtherUsers();
 
-  },[otherUsers])
+  },[])
   
 }
 
