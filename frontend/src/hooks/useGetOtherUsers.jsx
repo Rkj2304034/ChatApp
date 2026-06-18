@@ -7,13 +7,13 @@ import { setOtherUsers } from '../redux/userSlice';
 
 const useGetOtherUsers = () => {
     const dispatch = useDispatch();
-    const onlineUsers= useSelector(state => state.user)
+    const otherUsers = useSelector(state => state.user)
   useEffect(()=>{
 
     const fetchOtherUsers = async() => {
         try{
             axios.defaults.withCredentials = true;
-            const res = await axios.get('http://localhost:8000/api/user/');
+            const res = await axios.get('https://chatapp-br7r.onrender.com/api/user/');
             // now we have to send otherUsers to store
             dispatch(setOtherUsers(res.data));
 
@@ -25,7 +25,7 @@ const useGetOtherUsers = () => {
 
     fetchOtherUsers();
 
-  },[])
+  },[otherUsers])
   
 }
 

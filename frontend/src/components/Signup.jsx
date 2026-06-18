@@ -24,7 +24,7 @@ const Signup = () => {
       return toast.error("Passwords do not match");
     }
     try {
-      const res = await axios.post(`http://localhost:8000/api/user/register`, user, {
+      const res = await axios.post(`https://chatapp-br7r.onrender.com/api/user/register`, user, {
         headers: {
           "Content-Type": 'application/json'
         },

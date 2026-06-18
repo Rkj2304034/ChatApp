@@ -50,7 +50,7 @@ function App() {
       
        dispatch(setLoading(true));
         try{
-          const res = await axios.get('http://localhost:8000/api/user/me',{
+          const res = await axios.get('https://chatapp-br7r.onrender.com/api/user/me',{
             withCredentials : true
           })
           console.log(res);
@@ -73,7 +73,7 @@ function App() {
 
  useEffect(() => {
     if (authUser) {
-      const socketInstance = io('http://localhost:8000', {
+      const socketInstance = io('https://chatapp-br7r.onrender.com', {
         withCredentials: true,
         query: {
           userId: authUser._id,

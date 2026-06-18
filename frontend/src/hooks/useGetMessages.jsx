@@ -14,7 +14,7 @@ const useGetMessages = () => {
 
             try{
                 axios.defaults.withCredentials = true;
-                const res = await axios.get(`http://localhost:8000/api/message/receive/${selectedUser?._id}`)
+                const res = await axios.get(`https://chatapp-br7r.onrender.com/api/message/receive/${selectedUser?._id}`)
                 console.log(res.data);
 
                 //put the messages obtained into store(react-redux)

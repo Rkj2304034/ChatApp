@@ -25,7 +25,7 @@ const SendMessage = (props) => {
    if(props.file) formData.append("file",props.file);
 
       try{
-        const res = await axios.post(`http://localhost:8000/api/message/send/${selectedUser._id}`,formData);
+        const res = await axios.post(`https://chatapp-br7r.onrender.com/api/message/send/${selectedUser._id}`,formData);
 
       console.log(res);
       

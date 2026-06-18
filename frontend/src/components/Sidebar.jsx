@@ -26,7 +26,7 @@ const Sidebar = () => {
 
   const logOutHandler = async () => {
     try {
-      const res = await axios.get('http://localhost:8000/api/user/logout');
+      const res = await axios.get('https://chatapp-br7r.onrender.com/api/user/logout');
       if (res.data.success) {
         dispatch(setAuthUser(null));
         dispatch(setOtherUsers(null));
