@@ -1,5 +1,5 @@
 import React from 'react'
-import { User } from '../../../backend/models/user'
+// import { User } from '../../../backend/models/user'
 import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedUser } from '../redux/userSlice';
 
