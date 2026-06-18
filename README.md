@@ -42,6 +42,16 @@ https://chat-app-npll.vercel.app
 
 ---
 
+## 📸 Screenshots
+
+### 💬 Real-Time Chat Interface
+
+![Chat Interface](./screenshot/chat)
+
+### 📁 Multimedia Sharing
+
+![Multimedia Sharing](./screenshot/multidedia)
+
 ## 🛠️ Tech Stack
 
 ### Frontend
