@@ -1,4 +1,4 @@
-import cloudinary from "../config/cloudinary.js";
+import { uploadToCloudinary } from "../config/cloudinary.js";
 import { Conversation } from "../models/conversation.js";
 import { Message } from "../models/message.js";
 import { io,getSocketId } from "../socket.js";
@@ -26,12 +26,9 @@ export const sendMessage = async (req, res) => {
         mediaType = "File";
       }
 
-      const result = await cloudinary.uploader.upload(req.file.path, {
-        folder: "chat-app",
-        resource_type: "auto",
-      });
+  const result = await uploadToCloudinary(req.file.buffer);
 
-      mediaUrl = result.secure_url;
+mediaUrl = result.secure_url;
 
       // FileSystem.unlinkSync(req.file.path);
     }
