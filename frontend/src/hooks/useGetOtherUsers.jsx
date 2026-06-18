@@ -1,13 +1,13 @@
 import axios from 'axios'
 import React,{useEffect} from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { setOtherUsers } from '../redux/userSlice';
 
 // custom hook creation for getting other users
 
 const useGetOtherUsers = () => {
     const dispatch = useDispatch();
-    const {otherUsers} = useSelector(state => state.user)
+    // const {otherUsers} = useSelector(state => state.user)
   useEffect(()=>{
 
     const fetchOtherUsers = async() => {

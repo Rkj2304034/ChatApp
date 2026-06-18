@@ -42,8 +42,8 @@ export const registerUser = async(req,res) => {
 
     return res.status(201).cookie("token",token,{
         httpOnly: true,
-      secure: false, // true in production (HTTPS)
-      sameSite: 'lax',
+      secure: true, // true in production (HTTPS)
+      sameSite: "none",
       maxAge : 60 * 60 * 1000
     }).json({message : "Registered successfully!", success : true,user : newUser});
     }
@@ -77,8 +77,8 @@ export const loginUser = async(req,res) => {
         const token = setUser(user);
         return res.cookie("token",token, {
       httpOnly: true,
-      secure: false, // true in production (HTTPS)
-      sameSite: 'lax',
+      secure: true, // true in production (HTTPS)
+      sameSite: "none",
       maxAge : 60 * 60 * 1000
     }).status(200).json({
             userId : user._id,
